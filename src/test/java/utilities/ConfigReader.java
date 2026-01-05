@@ -15,7 +15,7 @@ public class ConfigReader {
     private static Properties properties;
 
     static {
-        String path = System.getProperty("user.dir")+"/src/test/resources/configurations/Configuration.properties";
+        String path = System.getProperty("user.dir") + "/src/test/resources/configurations/Configuration.properties";
         try {
             input = new FileInputStream(path);
             properties = new Properties();
@@ -33,7 +33,8 @@ public class ConfigReader {
             }
         }
     }
-    public static String getProperty(String key){
+
+    public static String getProperty(String key) {
         return properties.getProperty(key);
     }
 }
