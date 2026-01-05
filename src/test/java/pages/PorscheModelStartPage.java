@@ -13,7 +13,7 @@ public class PorscheModelStartPage {
 
     WebDriver driver;
 
-    public PorscheModelStartPage(){
+    public PorscheModelStartPage() {
         driver = Driver.getDriver();
         PageFactory.initElements(driver, this);
     }

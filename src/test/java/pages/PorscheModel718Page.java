@@ -31,21 +31,16 @@ public class PorscheModel718Page {
 
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("""
-            const cards = document.querySelectorAll("div.cursor-pointer");
-            for (const card of cards) {
-                const title = card.querySelector("h3");
-                if (title && title.textContent.trim() === '718 Cayman') {
-                    card.click();
-                    return;
-                }
-            }
-        """);
+                    const cards = document.querySelectorAll("div.cursor-pointer");
+                    for (const card of cards) {
+                        const title = card.querySelector("h3");
+                        if (title && title.textContent.trim() === '718 Cayman') {
+                            card.click();
+                            return;
+                        }
+                    }
+                """);
     }
-
-
-
-
-
 
 
 }
