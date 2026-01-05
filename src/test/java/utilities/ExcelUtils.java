@@ -19,8 +19,8 @@ public class ExcelUtils {
     /**
      * This method opens Excel files
      */
-    public static void openExcelFile(String fileName, String sheetName){
-        path = System.getProperty("user.dir")+"/src/test/resources/testdata/"+fileName+".xlsx";
+    public static void openExcelFile(String fileName, String sheetName) {
+        path = System.getProperty("user.dir") + "/src/test/resources/testdata/" + fileName + ".xlsx";
         try {
             FileInputStream file = new FileInputStream(path);
             workbook = new XSSFWorkbook(file);
@@ -35,16 +35,18 @@ public class ExcelUtils {
 
     /**
      * This method gets cell value using provided row and cell indexes
+     *
      * @param row
      * @param cell
      * @return
      */
-    public static String getValue(int row, int cell){
+    public static String getValue(int row, int cell) {
         return sheet.getRow(row).getCell(cell).toString();
     }
 
     /**
      * This method sets cell value using provided row and cell indexes
+     *
      * @param row
      * @param cell
      * @param value
@@ -83,8 +85,8 @@ public class ExcelUtils {
 
     public static void main(String[] args) throws IOException {
         ExcelUtils.openExcelFile("TestData", "Test Data");
-        System.out.println(ExcelUtils.getValue(4,0));
-        System.out.println(ExcelUtils.getValue(4,1));
+        System.out.println(ExcelUtils.getValue(4, 0));
+        System.out.println(ExcelUtils.getValue(4, 1));
 
         ExcelUtils.setValue(5, 0, "Lauren Brown");
 
