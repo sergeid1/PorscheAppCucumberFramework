@@ -27,7 +27,8 @@ public class PorscheConfiguratorPage {
                             "arguments[0].scrollIntoView({block:'center'});", el);
                     return el.getText().trim();
                 }
-            } catch (StaleElementReferenceException ignored) {}
+            } catch (StaleElementReferenceException ignored) {
+            }
         }
         throw new RuntimeException("Base MSRP not found");
     }
